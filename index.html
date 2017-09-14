@@ -8,6 +8,7 @@ Don't Judge
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ConvNet Calculator - Calculate output size of convolutional layers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -73,35 +74,37 @@ Don't Judge
       </div>
     </section>
     <section class="section">
-      <form id="calc">
-        <div class="control">
-          <div class="columns">
-            <div class="column">
-              <input class="input" type="text" placeholder="Width" id="width" />
-            </div>
-            <div class="column">
-              <input class="input" type="text" placeholder="Height" id="height" />
+      <div class="container">
+        <form id="calc">
+          <div class="control">
+            <div class="columns">
+              <div class="column">
+                <input class="input" type="text" placeholder="Width" id="width" />
+              </div>
+              <div class="column">
+                <input class="input" type="text" placeholder="Height" id="height" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="control">
-          <div class="columns">
-            <div class="column"><input class="input" type="text" placeholder="Filter / Kernel" id="filter" /></div>
-            <div class="column"><input class="input" type="text" placeholder="Padding" id="padding" /></div>
-            <div class="column"><input class="input" type="text" placeholder="Stride" id="stride" /></div>
+          <div class="control">
+            <div class="columns">
+              <div class="column"><input class="input" type="text" placeholder="Filter / Kernel" id="filter" /></div>
+              <div class="column"><input class="input" type="text" placeholder="Padding" id="padding" /></div>
+              <div class="column"><input class="input" type="text" placeholder="Stride" id="stride" /></div>
+            </div>
           </div>
-        </div>
-        <div class="field is-grouped is-grouped-centered" style="margin-top:20px;">
-          <p class="control">
-            <span class="button is-primary" id="calculate">
-            Calculate
-            </span>
-          </p>
-        </div>
-      </form>
-      <h1 class="title" style="margin-top:20px;">
-        Your output image will be <span id="new-width">?</span> x <span id="new-height">?</span>
-      </h1>
+          <div class="field is-grouped is-grouped-centered" style="margin-top:20px;">
+            <p class="control">
+              <span class="button is-primary" id="calculate">
+              Calculate
+              </span>
+            </p>
+          </div>
+        </form>
+        <h1 class="title" style="margin-top:20px;">
+          Your output image will be <span id="new-width">?</span> x <span id="new-height">?</span>
+        </h1>
+      </div>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
